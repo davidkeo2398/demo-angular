@@ -1,0 +1,5 @@
+<p>{{message.value}}</p>
+<input type="text" #itemData />
+<button type="button" (click)="addOutputData(itemData.value)">Click from child</button>
+<input type="text" placeholder="input message" #message />
+<button type="button" (click)="handleMessage(message.value)">Update message</button>

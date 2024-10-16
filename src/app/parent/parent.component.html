@@ -1,0 +1,8 @@
+<p>parent works!</p>
+<p>{{parentData}}</p>
+<input type="text" [(ngModel)]="message" />
+<button (click)="updateMessage()">Click</button>
+<div *ngFor="let item of outputData; first as firstItem">
+    <p [ngClass]="{firstItem: firstItem,otherItem: !firstItem}" class="otherItem" class="outputData">{{item}}</p>
+</div>
+<app-child [data]="parentData" [(message)]="message" (childData)="addOutputData($event)"></app-child>
