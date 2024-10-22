@@ -26,6 +26,9 @@ export class ParentComponent {
   addOutputData = (animal: string): void => {
     this.outputData.push(animal);
   };
+  ngOnInit():void{
+    
+  }
   updateMessage = (): void => {
     this.message = this.message;
   };
