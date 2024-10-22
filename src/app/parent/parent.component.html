@@ -6,3 +6,7 @@
     <p [ngClass]="{firstItem: firstItem,otherItem: !firstItem}" class="otherItem" class="outputData">{{item}}</p>
 </div>
 <app-child [data]="parentData" [(message)]="message" (childData)="addOutputData($event)"></app-child>
+<app-button-tmpl>
+    <button hihi>Click hihi</button>
+</app-button-tmpl>
+<!-- <ng-container [ngTemplateOutlet]="content"></ng-container> -->

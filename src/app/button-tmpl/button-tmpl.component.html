@@ -1,0 +1,7 @@
+<ng-content></ng-content>
+<ng-container *ngIf="isShow===1; else content">
+    <p>The p ne</p>
+</ng-container>
+<ng-template #content>
+    <p>template ne</p>
+</ng-template>

@@ -2,11 +2,14 @@ import { Component, ContentChild, ViewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ButtonTmplComponent } from '../button-tmpl/button-tmpl.component';
+import { SharedModule } from '../shared/shared.module';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-parent',
   standalone: true,
-  imports: [ChildComponent, FormsModule, CommonModule],
+  imports: [ChildComponent, FormsModule, CommonModule, SharedModule],
   templateUrl: './parent.component.html',
   styleUrl: './parent.component.scss',
 })
@@ -24,7 +27,6 @@ export class ParentComponent {
     this.outputData.push(animal);
   };
   updateMessage = (): void => {
-    console.log(this.message)
     this.message = this.message;
   };
 
