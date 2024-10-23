@@ -1,4 +1,44 @@
-<table>
+<!-- <table>
     <th>id</th>
     <th>username</th>
-</table>
+</table> -->
+<p-table [value]="users" [paginator]="true" [rows]="10" [tableStyle]="{ 'min-width': '50rem' }"
+    [rowsPerPageOptions]="[5, 10, 20]">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width:25%">Id</th>
+            <th style="width:25%">First Name</th>
+            <th style="width:25%">Last Name</th>
+            <th style="width:25%">Email</th>
+            <th style="width:25%">Gender</th>
+            <th style="width:25%">User Name</th>
+            <th style="width:25%">Age</th>
+            <th style="width:25%">Address</th>
+            <th style="width:25%">Phone Number</th>
+            <th style="width:25%">Avatar</th>
+            <th style="width:25%">Role</th>
+            <th style="width:25%">Count</th>
+            <th style="width:25%">Created At</th>
+            <th style="width:25%">Updated At</th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.phoneNumber }}</td>
+            <td>{{ user.avatar }}</td>
+            <td>{{ user.role }}</td>
+            <td>{{ user.count }}</td>
+            <td>{{ user.updatedAt }}</td>
+            <td>{{ user.createdAt }}</td>
+        </tr>
+    </ng-template>
+</p-table>
